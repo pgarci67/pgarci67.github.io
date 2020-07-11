@@ -14,7 +14,7 @@
 <body>
 <script>
 
-AFRAME.registerComponent('updater', {
+AFRAME.registerComponent('text1', {
 	
 	init: function()
 	{
@@ -24,7 +24,7 @@ AFRAME.registerComponent('updater', {
 	tick: function (time, timeDelta) 
 	{
 		
-		let newText = "Seconds: ";
+		let newText = "Hem arribat al final del curs!!";
 		this.el.setAttribute("text-geometry", "value", newText)
 		
 	}
@@ -87,7 +87,7 @@ AFRAME.registerComponent('updater', {
 			bevelThickness: 0.02;
 			value: Seconds: ?"
 		material="color: #AAAAFF; src: #hexagons; repeat: 20 20;"
-		updater>
+		text1>
 	</a-entity>
 
 </a-scene>
