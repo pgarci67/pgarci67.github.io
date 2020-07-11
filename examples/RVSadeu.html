@@ -31,6 +31,23 @@ AFRAME.registerComponent('text1', {
 	
 });
 
+AFRAME.registerComponent('text2', {
+	
+	init: function()
+	{
+		// apply material to this.el.object3d
+	},
+
+	tick: function (time, timeDelta) 
+	{
+		
+		let newText = "#RVSeduca";
+		this.el.setAttribute("text-geometry", "value", newText)
+		
+	}
+	
+});
+
 </script>
 <!-- https://github.com/supermedium/aframe-environment-component
 <a-scene environment="preset: default;"> -->
@@ -78,7 +95,7 @@ AFRAME.registerComponent('text1', {
   
  <a-entity 
 		id="textArea"
-		position="-1.5 2 -3" 
+		position="-2.5 2 -3" 
 		text-geometry="font: #customFont;  
 			size: 0.5; 
 			height: 0.1;
@@ -88,6 +105,20 @@ AFRAME.registerComponent('text1', {
 			value: Seconds: ?"
 		material="color: #AAAAFF; src: #hexagons; repeat: 20 20;"
 		text1>
+	</a-entity>
+	
+	<a-entity 
+		id="textArea"
+		position="-2.5 2 -2" 
+		text-geometry="font: #customFont;  
+			size: 0.5; 
+			height: 0.1;
+			bevelEnabled: true;
+			bevelSize: 0.02;
+			bevelThickness: 0.02;
+			value: texto"
+		material="color: #AAAAFF; src: #hexagons; repeat: 20 20;"
+		>
 	</a-entity>
 
 </a-scene>
